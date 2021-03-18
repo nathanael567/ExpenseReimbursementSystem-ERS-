@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Manager Page</title>
+    <link rel="stylesheet" type="text/css" href="model.css">
+    <link rel="stylesheet" type="text/css" href="managerS.css">
+    <link rel="stylesheet" type="text/css" href="employeeS.css">
+    <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
+</head>
+
+<body>
+
+    
+
+    <body style="background: #C8C3C3 !important">
+        <div class="col-12 topBanner">
+
+            <div id=innerDiv>
+                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search by Ticket ID..">
+
+                <img class="topLogo" src="logo.jpg" id="topLogo" height="200" width="350" >
+            </div>
+            <table class="js-sort-table" id="table1">
+                <thead>
+                    <tr>
+                        <th class="js-sort-number">Ticket ID</th>
+                        <th class="js-sort-number">Amount</th>
+                        <th class="js-sort-date">Submission Date</th>
+                        <th class="js-sort-date">Resolve Date</th>
+                        <th>Description</th>
+
+                        <th>Employee ID</th>
+                        <th class="js-sort-number">Manager ID</th>
+                        <th class="js-sort-string">Status</th>
+                        <th class="js-sort-string">Type</th>
+                    </tr>
+                </thead>
+                
+            </table>
+        </div>
+        
+
+       
+        <div class="row" id="toprow">
+            <div class="col-12 topBanner">
+                <div class="topOptions">
+                    <div id="username"></div>
+                    <form action="logout" method="POST">
+                        <input type="submit" value="Logout" >
+                    </form>
+                    
+                </div>
+        </div>
+
+
+        <script type="text/javascript" src="Manager.js"></script>
+        <script type="text/javascript" src="sort-table.js"></script>
+    </body>
+
+</html>

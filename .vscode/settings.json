@@ -1,0 +1,16 @@
+{
+    "maven.view": "hierarchical",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "natejavadatabase.cvnkugrfdj8n.us-east-2.rds.amazonaws.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "reimbursmentproject",
+            "database": "projectdb",
+            "username": "projectuser",
+            "password": "pastword"
+        }
+    ]
+}
