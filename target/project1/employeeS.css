@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 175vh;
+  
+}
+
+a {
+  color: #fa6400;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+  font-size: 43px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  
+}
+
+h4 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 150;
+  display:inline-block;
+  margin: 40px 8px 10px 8px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.topOptions {
+	position: relative;
+	float: right;
+}
+
+.newTickets{
+	float: left;
+	padding: 15px;
+	border-spacing: 25px;
+	background-color: #C8C3C3 !important;
+	width: 33.33%;
+	min-height: 100vh;
+}
+
+.currentTickets{
+	float: left;
+	padding: 15px;
+	
+	background-color:#C8C3C3 !important;
+	width: 66.66%;
+	min-height: 100vh;
+}
+
+textarea{
+  width: 100%;
+  height: 15em;
+  padding: 3px;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+  border: 2px solid #fa6400;
+  background-color: #d8d8d8;
+  resize: none;
+  
+}
+
+textarea:focus {
+    height: 7em;
+}
+
+#ticketAmount {
+	width: 150px;
+	height: 28px;
+	padding: 1px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+#toprow {
+  background-color: #C8C3C3 !important;
+}
+
+#table1 tr:hover {
+	background-color: rgba(194, 185, 185, 0.692);
+}
+
+#table1 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+  font-size: 15px;
+	background-color: #fa6400;
+	color: white;
+}
+
+#table1 {
+	font-family: "Roboto";
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#table1 td, #table1 th {
+    border-collapse-right: 1px solid #ddd;
+    border-collapse-left: 1px solid #ddd;
+    border-collapse-top: 1px solid #ddd;
+    border-collapse-bottom: 1px solid #ddd;
+    border-collapse: collapse;
+	  padding: 8px;
+}
+
+
+/* FORM TYPOGRAPHY*/
+
+#logout {
+	background-color: #fa6400;
+	color: white;
+	padding: 7px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	width: 80%;
+}
+
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #fa6400;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 5px 20px 40px 20px;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: black;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+
+
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+

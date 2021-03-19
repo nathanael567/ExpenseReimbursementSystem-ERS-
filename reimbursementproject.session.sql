@@ -119,11 +119,11 @@ INSERT INTO USERS VALUES(
 1);
 
 INSERT INTO USERS VALUES(
-4,'employee#3','thisjobisthebest','Johnny','Deer',
+3,'employee#3','thisjobisthebest','Johnny','Deer',
 'johnnydeer@gmail.com',1);
 
 INSERT INTO USERS VALUES(
-100,'manager','1234','Tim','Williams','timmy@gmail.com',
+4,'manager','1234','Tim','Williams','timmy@gmail.com',
 2);
 
 
