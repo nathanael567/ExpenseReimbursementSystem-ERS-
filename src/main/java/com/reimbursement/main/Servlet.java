@@ -13,13 +13,11 @@ public class Servlet extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
-		System.out.println("in doGet");
 		req.getRequestDispatcher(RequestHelper.process(req, res)).forward(req,res);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
-		System.out.println("in doPost");
 		req.getRequestDispatcher(RequestHelper.process(req, res)).forward(req,res);
 	}
 	

@@ -1,6 +1,7 @@
 package com.reimbursement.main;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,19 +11,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.reimbursement.model.User;
 
 public class ManagerController {
-	
-public static String Home(HttpServletRequest request, HttpServletResponse response) {
-		
-		User ManagerUser = (User)request.getSession().getAttribute("CurrentUser");
-		//Marshalling tool - the idea of converting an object into a data format 
-		//in our case - User to JSON (Jackson)
+	final static Logger log = Logger.getAnonymousLogger();
+
+	public static String Home(HttpServletRequest request, HttpServletResponse response) {
+
+		User ManagerUser = (User) request.getSession().getAttribute("CurrentUser");
 		try {
 			response.getWriter().write(new ObjectMapper().writeValueAsString(ManagerUser));
+			log.info("The manager is now logged in the manager home site! :) ");
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return "manager.html";

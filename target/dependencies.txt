@@ -2,11 +2,11 @@ digraph "com.reimbursement:project1:war:1.0-SNAPSHOT" {
 	"com.reimbursement:project1:war:1.0-SNAPSHOT" -> "postgresql:postgresql:jar:9.1-901.jdbc4:compile" ; 
 	"com.reimbursement:project1:war:1.0-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
 	"com.reimbursement:project1:war:1.0-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
-	"com.reimbursement:project1:war:1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.9.9:compile" ; 
+	"com.reimbursement:project1:war:1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
 	"com.reimbursement:project1:war:1.0-SNAPSHOT" -> "org.eclipse.scout.rt:org.eclipse.scout.rt.ui.html:jar:11.0.12:compile" ; 
 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
-	"com.fasterxml.jackson.core:jackson-databind:jar:2.9.9:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:compile" ; 
-	"com.fasterxml.jackson.core:jackson-databind:jar:2.9.9:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.9.9:compile" ; 
+	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
 	"org.eclipse.scout.rt:org.eclipse.scout.rt.ui.html:jar:11.0.12:compile" -> "org.eclipse.scout.rt:org.eclipse.scout.rt.server.commons:jar:11.0.12:compile" ; 
 	"org.eclipse.scout.rt:org.eclipse.scout.rt.ui.html:jar:11.0.12:compile" -> "org.eclipse.scout.rt:org.eclipse.scout.rt.client:jar:11.0.12:compile" ; 
 	"org.eclipse.scout.rt:org.eclipse.scout.rt.ui.html:jar:11.0.12:compile" -> "org.eclipse.scout.rt:org.eclipse.scout.json:jar:11.0.12:compile" ; 

@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import com.reimbursement.model.User;
 import com.reimbursement.util.ConnectionUtil;
@@ -13,7 +14,8 @@ import com.reimbursement.util.ConnectionUtil;
  * Implementation of UserDAO that reads/writes to a relational database
  */
 public class UserDAO {
-    
+    final static Logger log = Logger.getAnonymousLogger();
+	
     /**
 	 * Retrieves all users in the persistence layer
 	 * @return a list of all users
@@ -35,8 +37,9 @@ public class UserDAO {
 						rs.getString(6),
 						rs.getInt(7)));
 			}
+			log.info("Success getting all users! :)");
 		} catch (SQLException e) {
-			System.out.println("Connection Failed!");
+			log.info("Failed getting all users!");
 			e.printStackTrace();
 		}
 		return userList;
@@ -64,10 +67,12 @@ public class UserDAO {
                 user.setEmail(rs.getString("email"));
                 user.setRoleid(rs.getInt("userroleid"));
 			}
+			log.info("Success getting user! :)");
 			rs.close();
 			s.close();
 			conn.close();
 		} catch (SQLException e) {
+			log.info("Failed getting user!");
 			e.printStackTrace();
 		}
 		return user;

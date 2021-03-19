@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.logging.Logger;
 
 import com.reimbursement.model.Ticket;
 import com.reimbursement.util.ConnectionUtil;
@@ -16,6 +17,8 @@ import com.reimbursement.util.ConnectionUtil;
 *
 */
 public class TicketDAO {
+    final static Logger log = Logger.getAnonymousLogger();
+
     
     public void insertTicket(Ticket x) {
         try {
@@ -32,10 +35,11 @@ public class TicketDAO {
             ps.setInt(7, x.getStatusid());
             ps.setInt(8, x.gettypeid());
             ps.executeUpdate();
-            System.out.println("Success!");
+
+            log.info("Success while inserting ticket! :)");
 
         } catch (SQLException e) {
-            System.out.println("Connection Failed! InsertTicket");
+            log.info("Failed while inserting ticket!");
             e.printStackTrace();
         }
 
@@ -60,8 +64,9 @@ public class TicketDAO {
                     rs.getInt(8),
                     rs.getInt(9)));
             }
+            log.info("Success in getting ticket by reburseID! :)");
         } catch (SQLException e) {
-            System.out.println("Connection Failed! SelectTicket");
+            log.info("Failed to get ticket!");
             e.printStackTrace();
         }
        
@@ -86,8 +91,9 @@ public class TicketDAO {
                     rs.getInt(8),
                     rs.getInt(9)));
             }
+            log.info("Success with getting tickets! :)");
         } catch (SQLException e) {
-            System.out.println("Connection Failed! SelectTicket");
+            log.info("Failed getting all tickets!");
             e.printStackTrace();
         }
        
@@ -112,8 +118,9 @@ public class TicketDAO {
                     rs.getInt(8),
                     rs.getInt(9)));
             }
+            log.info("Success with getting ticket by ID! :)");
         } catch (SQLException e) {
-            System.out.println("Connection Failed! SelectTicket");
+            log.info("Failed with getting ticket by ID!");
             e.printStackTrace();
         }
        
@@ -138,8 +145,9 @@ public class TicketDAO {
             ps.setInt(2, approved);
 			ps.executeUpdate();
 			conn.commit();
+            log.info("Success with approving ticket! :)");
         }catch (SQLException e) {
-			System.out.println("Statement Failed! ApproveTicket");
+            log.info("Failed to approve ticket!");
 			e.printStackTrace();
 		}
     }
@@ -161,8 +169,9 @@ public class TicketDAO {
             ps.setInt(2, denied);
 			ps.executeUpdate();
 			conn.commit();
+            log.info("Success with denying ticket! :)");
         }catch (SQLException e) {
-			System.out.println("Statement Failed! ApproveTicket");
+            log.info("Failed in the deny ticket!");
 			e.printStackTrace();
 		}
     }

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +17,8 @@ import com.reimbursement.model.Ticket;
 import com.reimbursement.model.User;
 
 public class TicketController {
-
+    final static Logger log = Logger.getAnonymousLogger();
+    
     public static String submitTicket(HttpServletRequest request) {
         User EmployeeUser = (User) request.getSession().getAttribute("CurrentUser");
         TicketDAO ticketDAO = new TicketDAO();
@@ -28,7 +30,6 @@ public class TicketController {
         Timestamp submitted = new Timestamp(date.getTime());
         Timestamp resolved = null;
         String description = request.getParameter("ticketDesc");
-        System.out.println(description);
 
         int author = EmployeeUser.getUserid();
         int resolver = 4;
@@ -54,6 +55,7 @@ public class TicketController {
                 typeid);
 
         ticketDAO.insertTicket(newTicket);
+        log.info("Sucessfully submitted ticket! :)");
         request.getSession().setAttribute("CurrentUser", EmployeeUser);
         
         return "employee.html";
@@ -95,16 +97,15 @@ public class TicketController {
 		try {
             BufferedReader reader = request.getReader();
 			String data = reader.readLine();
-            System.out.println(data);
             tick.approveTicket(data);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
         
-        System.out.println("Successfully Approved");
+        log.info("Successfully approved tickets! :)");
         request.getSession().setAttribute("CurrentUser", EmployeeUser);
 
-        return "manager.change";
+        return "manager.html";
 
     }
 
@@ -114,15 +115,15 @@ public class TicketController {
 		try {
             BufferedReader reader = request.getReader();
 			String data = reader.readLine();
-            System.out.println(data);
             tick.denyTicket(data);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
         
-        System.out.println("Successfully Denied");
+        log.info("Successfully Denied");
         request.getSession().setAttribute("CurrentUser", EmployeeUser);
-        return "manager.change";
+
+        return "manager.html";
 
     }
 

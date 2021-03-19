@@ -8,9 +8,13 @@
     <link rel="stylesheet" type="text/css" href="managerS.css">
     <link rel="stylesheet" type="text/css" href="employeeS.css">
     <script type="text/javascript">
-        function preventBack() { window.history.forward(); }
+        function preventBack() { 
+            window.history.forward();
+        }
         setTimeout("preventBack()", 0);
-        window.onunload = function () { null };
+        window.onunload = function () { 
+            null 
+        };
     </script>
 </head>
 
@@ -22,7 +26,7 @@
         <div class="col-12 topBanner">
 
             <div id=innerDiv>
-                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search by Ticket ID..">
+                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search by status..">
 
                 <img class="topLogo" src="logo.jpg" id="topLogo" height="200" width="350" >
             </div>
