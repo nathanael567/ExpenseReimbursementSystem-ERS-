@@ -12,3 +12,6 @@ Utilized PostgreSQL, JDBC, Servlets, Tomcat web container and sessions.
 ~ Leveraged CSS to style tables
 ~ Deployed application on a local Tomcat Server
 ~ Utilized JDBC to access/modify the database
+
+# Environment / Technologies
+Servlets, Java, HTML, CSS, JDBC, SQL, AJAX, JavaScript
